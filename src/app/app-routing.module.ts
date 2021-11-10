@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DamolaComponent } from './views/components/damola/damola.component';
+import { ClientFormComponent } from './views/components/clients/client-form/client-form.component';
+
 
 const routes: Routes = [
 
   {
     path: '',
-    component: DamolaComponent
+    component: ClientFormComponent
   }
 
 ];

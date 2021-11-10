@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DamolaComponent } from './damola.component';
+import { ClientPageComponent } from './client-page.component';
 
-describe('DamolaComponent', () => {
-  let component: DamolaComponent;
-  let fixture: ComponentFixture<DamolaComponent>;
+describe('ClientPageComponent', () => {
+  let component: ClientPageComponent;
+  let fixture: ComponentFixture<ClientPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DamolaComponent ]
+      declarations: [ ClientPageComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DamolaComponent);
+    fixture = TestBed.createComponent(ClientPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
