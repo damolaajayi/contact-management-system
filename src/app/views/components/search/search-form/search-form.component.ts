@@ -1,45 +1,39 @@
 import { Component, OnInit } from '@angular/core';
-import {
- Form,
- FormBuilder,
- FormGroup,
- FormControl,
- Validators
-} from '@angular/forms';
- 
+
+
+
 @Component({
- selector: 'app-client-form',
- templateUrl: './client-form.component.html',
- styleUrls: ['./client-form.component.css']
+
+  selector: 'app-search-form',
+
+  templateUrl: './search-form.component.html',
+
+  styleUrls: ['./search-form.component.css']
+
 })
-export class ClientFormComponent implements OnInit {
- // new FormGroup is defined here
- clientForm: FormGroup;
+
+export class SearchFormComponent implements OnInit {
+
+
+
+searchField!: string;
+
  
- // creating new FormControls, with validation
- firstname = new FormControl('', Validators.required);
- lastname = new FormControl('', Validators.required);
- email = new FormControl('', Validators.required);
- telephoneNumber = new FormControl('');
- companyName = new FormControl('', Validators.required);
+
+constructor() {}
+
  
- // in the constructor we create the a FormGroup and set the properties of
- // the formGroup to the FormControls then set it to be the clientForm we use
- // in the template.
- constructor(fb: FormBuilder) {
- this.clientForm = fb.group({
- firstname: this.firstname,
- lastname: this.lastname,
- email: this.email,
- telephoneNumber: this.telephoneNumber,
- companyName: this.companyName
- });
+
+ngOnInit() {}
+
+ 
+
+onSubmit() {
+
+console.log(this.searchField);
+
  }
- 
- ngOnInit() {}
- 
- // event called when form is submitted, displaying the output of the form
- saveClient() {
- console.log(this.clientForm);
- }
+
+
+
 }
